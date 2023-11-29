@@ -1,0 +1,8 @@
+//
+// Created by Ivan on 16.11.2023.
+//
+
+#ifndef TEST_PROJECT_AUTO_CONTROL_H
+#define TEST_PROJECT_AUTO_CONTROL_H
+
+#endif //TEST_PROJECT_AUTO_CONTROL_H

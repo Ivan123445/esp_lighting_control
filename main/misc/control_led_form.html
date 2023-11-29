@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Led control</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: 40px auto;
+        }
+        .block {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px 0;
+        }
+
+        .block p {
+            color: #000;
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        .switch-for {
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 25px;
+            position: relative;
+        }
+
+        .switch-for::after {
+            content: "";
+            width: 50px;
+            height: 25px;
+            background-color: green;
+            border: 1px solid #000;
+            border-radius: 15px;
+            position: absolute;
+            top: -4px;
+            right: -62px;
+        }
+
+        .switch-for::before {
+            content: "";
+            width: 21px;
+            height: 21px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            right: -35px;
+            top: -1px;
+            z-index: 1;
+            transition-duration: 300ms;
+        }
+
+        .switch {
+            display: none;
+        }
+
+        .switch:checked + .switch-for::before {
+            right: -58px;
+        }
+    </style>
+</head>
+<body>
+<form method="post">
+    <p><input type="checkbox" name="html5"/>HTML5</p>
+    <p><input type="checkbox" name="html5"/>HTML5</p>
+    <p><input type="checkbox" name="html5"/>HTML5</p>
+</form>
+
+<div class="container">
+    <input class="switch" id="switch1" type="checkbox">
+    <label class="switch-for" for="switch1">Change color</label>
+    <div class="block">
+        <p>Some text</p>
+    </div>
+</div>
+
+</body>
+</html>
